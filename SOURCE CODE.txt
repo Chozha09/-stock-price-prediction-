@@ -109,7 +109,6 @@ plt.ylabel('VALUES')
 plt.legend()
 plt.show()
 
-
 plt.figure(figsize=(12 , 6))
 # Select a subset of data for better visualization (e.g., last 60 days)
 subset = df.last('100D')
@@ -168,10 +167,8 @@ y = df['VOLUME']
  #Train-Test Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=20, random_state=42)
 
-
 # Plot the scatter plot for Linear Regression Actual vs Predicted Prices
 # This plot now correctly uses the y_test_lr and y_pred_lr from the price prediction model
-
 
 plt.figure(figsize=(14, 6))
 plt.scatter(y_test_lr, y_pred_lr, alpha=0.5, color='blue')
@@ -184,8 +181,6 @@ plt.title(' Actual vs Predicted Prices')
 plt.legend()
 plt.grid(alpha=0.3)
 plt.show()
-
-
 
 model = LinearRegression()
 model.fit(X_train, y_train)
